@@ -1,0 +1,108 @@
+header{
+    width: 100%;
+    height: 55px;
+    background: $color-main;
+    position: fixed;
+}
+
+.header-wrapper-mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+
+}
+
+//Hamburger menu
+.hamburger-menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 5s ease-in-out;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    
+    
+}
+
+.hamburger{
+    width: 30px;
+    height: 3px;
+    background: $color-white;
+    transition: all .5s ease-in-out;
+    &::after,
+    &::before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: $color-white;
+        transition: all .5s ease-in-out;
+        transition-delay: .5s;
+    }
+    &::after{
+        transform: translatey(7px);
+    }
+    &::before{
+        transform: translatey(-7px);
+    }
+}
+
+.hamburger-menu:not(.open) .hamburger{
+    &::before,
+    &::after{
+        transition-delay: 0s;
+    }
+}
+
+//animation
+.hamburger-menu.open .hamburger{
+    background: transparent;
+}
+
+.hamburger-menu.open .hamburger::before{
+    transform: rotate(45deg);
+}
+.hamburger-menu.open .hamburger::after{
+    transform: rotate(-45deg);
+}
+
+//Dropdown menu
+.overlay{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+    background: $color-overlay;
+    position: fixed;
+    z-index: 999;
+    top: 55px;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+.overlay-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: $color-modal-main;
+    height: 190px;
+}
+
+.overlay-menu li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    border-radius: 7px;
+    margin: 7px;
+    background: $color-modal-secondary;
+}
