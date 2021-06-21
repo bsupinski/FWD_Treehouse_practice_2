@@ -4,19 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>FeatherLITE Mockup</title>
 </head>
 <body>
+    <div class="create-message-overlay">
+        <div class="message-modal">
+            <h3>Create a new note</h3>
+            <form>
+                <div class="create-wrapper-input label-wrapper">
+                    <label for="">Choose a label</label>
+                    <div class="label-choices">
+                        <!--Label choice options go here-->
+                        <!-- <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div>
+                        <div class="label-choices-options"></div> -->
+
+                        <!--Label choice options go here-->
+                    </div>
+                </div>
+                <div class="create-wrapper-input">
+                    <label for="">Give your note a title</label>
+                    <input type="text" id="your-title">
+                </div>
+                <div class="create-wrapper-textarea">
+                    <label for="">Write down your note</label>
+                    <textarea name="yourMessage" id="your-message" cols="30" rows="10"></textarea>
+                </div>
+                <input type="button" value="Post Note">
+            </form>
+        </div>
+    </div>
     <header>
         <div class="header-wrapper-mobile">
             <div class="hamburger-menu">
                 <div class="hamburger"></div>
-                
             </div>
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="feather-alt" id="feather-logo-header" class="svg-inline--fa fa-feather-alt fa-w-16 feather-logo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 0C460.22 3.56 96.44 38.2 71.01 287.61c-3.09 26.66-4.84 53.44-5.99 80.24l178.87-178.69c6.25-6.25 16.4-6.25 22.65 0s6.25 16.38 0 22.63L7.04 471.03c-9.38 9.37-9.38 24.57 0 33.94 9.38 9.37 24.59 9.37 33.98 0l57.13-57.07c42.09-.14 84.15-2.53 125.96-7.36 53.48-5.44 97.02-26.47 132.58-56.54H255.74l146.79-48.88c11.25-14.89 21.37-30.71 30.45-47.12h-81.14l106.54-53.21C500.29 132.86 510.19 26.26 512 0z"></path>
             </svg>
         </div>
     </header>
+    
     <main>
     <div class="overlay">
         <ul class="overlay-menu">
@@ -26,32 +93,65 @@
         </ul>
     </div>
         <div class="main-wrapper">
-            <h2>FeatherLITE</h2>
-            <section class="functions">
-                <div class="search-wrapper">
+            <h2 class="company-name">FeatherLITE</h2>
+            <div class="search-wrapper">
+                <div class="input-wrapper">
                     <label for="search-bar"></label>
                     <input type="text" id="search-bar">
-                    <p>Search through your notes</p>
-                </div>
-                <div class="create-note">
-                    <h3>Creat a new note</h3>
-                    <p>+</p>
-                </div>
-            </section>
+                    <button class="arrow"><i class="fas fa-arrow-right"></i></div>
+                </button>
+                <p>Search through your notes</p>
+            </div>
+            <div class="create-note">
+                <h3>Creat a new note</h3>
+                <button class="add-button"><i class="add-button-icon fas fa-plus"></i></button>
+            </div>
         </div>
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        v
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        v
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        v<div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
-        <div class="div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quis sint dolor ducimus natus, eos beatae est voluptates in quia, sit inventore nisi optio voluptatibus neque nemo quas molestiae deserunt.</div>
+        <section class="messages">
+            <div class="new-message">
+                <div class="date-wrapper">
+                    <div class="label-color"></div>
+                    <div class="date">June 02, 2020</div>
+                </div>
+                <div class="message-wrapper">
+                    <h4 class="title">This is the Title</h4>
+                    <p class="message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi a excepturi non rem iste blanditiis. Ducimus libero aut repudiandae? Ipsam ea natus quae, ad debitis sed perspiciatis veritatis obcaecati veniam.</p>
+                </div>
+            </div>
+            <div class="new-message">
+                <div class="date-wrapper">
+                    <div class="label-color"></div>
+                    <div class="date">June 02, 2020</div>
+                </div>
+                <div class="message-wrapper">
+                    <h4 class="title">This is the Title</h4>
+                    <p class="message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi a excepturi non rem iste blanditiis. Ducimus libero aut repudiandae? Ipsam ea natus quae, ad debitis sed perspiciatis veritatis obcaecati veniam.</p>
+                </div>
+            </div>
+            <div class="new-message">
+                <div class="date-wrapper">
+                    <div class="label-color"></div>
+                    <div class="date">June 02, 2020</div>
+                </div>
+                <div class="message-wrapper">
+                    <h4 class="title">This is the Title</h4>
+                    <p class="message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi a excepturi non rem iste blanditiis. Ducimus libero aut repudiandae? Ipsam ea natus quae, ad debitis sed perspiciatis veritatis obcaecati veniam.</p>
+                </div>
+            </div>
+            <div class="new-message">
+                <div class="date-wrapper">
+                    <div class="label-color"></div>
+                    <div class="date">June 02, 2020</div>
+                </div>
+                <div class="message-wrapper">
+                    <h4 class="title">This is the Title</h4>
+                    <p class="message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi a excepturi non rem iste blanditiis. Ducimus libero aut repudiandae? Ipsam ea natus quae, ad debitis sed perspiciatis veritatis obcaecati veniam.</p>
+                </div>
+            </div>
+        </section>
+        
     </main>
     <script src="js/menu.js"></script>
+    <script src="js/message-creator.js"></script>
 </body>
 </html>

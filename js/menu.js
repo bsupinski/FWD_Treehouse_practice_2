@@ -6,10 +6,14 @@ menuBtn.addEventListener("click", () => {
     if(!menuOpen) {
         menuBtn.classList.add("open");
         menuOpen = true;
-        overlayMenu.style.display="flex";
+        setTimeout(function (){
+            overlayMenu.style.display="flex";
+        }, 400)
     }else{
         menuBtn.classList.remove("open")
         menuOpen = false;
-        overlayMenu.style.display="none";
+        setTimeout(function (){
+            overlayMenu.style.display="none";
+        }, 400) 
     }
 })

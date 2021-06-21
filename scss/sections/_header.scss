@@ -3,6 +3,7 @@ header{
     height: 55px;
     background: $color-main;
     position: fixed;
+    top: 0;
 }
 
 .header-wrapper-mobile{
@@ -84,6 +85,7 @@ header{
     top: 55px;
     display: none;
     transition: all .5s ease-in-out;
+    
 }
 
 .overlay-menu{
