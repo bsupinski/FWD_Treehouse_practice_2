@@ -74,7 +74,7 @@ postIt.addEventListener("click", ()=>{
         `
         <div class="new-message">
             <div  class="date-wrapper">
-                <div style="background-color:${labelColor}; class="label-color"></div>
+                <div style="background-color:${labelColor}"; class="label-color"></div>
                 <div class="date">${today}</div>
             </div>
             <div class="message-wrapper">
