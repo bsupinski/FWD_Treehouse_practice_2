@@ -699,6 +699,10 @@ textarea {
   border: 3px solid #dba3b2;
 }
 
+.active {
+  border: 3px solid black;
+}
+
 .messages {
   display: flex;
   flex-direction: column;

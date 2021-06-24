@@ -40,6 +40,22 @@ styleColors.forEach(color => {
 
 });
 
+//toggle active on label choice options
+var lbc = document.getElementsByClassName("label-choices-options");
+console.log(lbc);
+Array.from(lbc).forEach(div =>{
+    div.addEventListener("click", () =>{
+        if (div.classList.contains('active')){
+            div.classList.remove('active')
+        }else{
+            div.classList.add('active');
+        }
+    })
+})
+
+
+
+
 //Getting user label choice
 var labelColor;
 

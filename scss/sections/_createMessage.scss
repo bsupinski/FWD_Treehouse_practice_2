@@ -75,8 +75,8 @@ textarea{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
+
 
 .label-choices-options{
     background-color: black;
@@ -99,5 +99,8 @@ textarea{
 .post-it:active{
     background-color: darken($color-secondary, 12);
     border: 3px solid $color-secondary;
+}
 
+.active{
+    border: 3px solid black;
 }
