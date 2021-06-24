@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
     background: $color-overlay;
     z-index: 999;
+    display: none;
 }
 
 .message-modal{
@@ -22,11 +23,15 @@
 }
 
 .message-modal h3{
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 form{
     width: 90%;
+}
+
+label{
+    padding: 5px 0;
 }
 
 .label-choices,
@@ -68,7 +73,7 @@ textarea{
 .label-choices{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
 }
@@ -78,6 +83,21 @@ textarea{
     width: 15px;
     height: 15px;
     margin: 4px;
-    border-radius: 9px;
+    border-radius: 45px;
     border: 1px solid $color-text-bg
+}
+
+.post-it{
+    background-color: $color-secondary;
+    width: 85px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.post-it:active{
+    background-color: darken($color-secondary, 12);
+    border: 3px solid $color-secondary;
+
 }
