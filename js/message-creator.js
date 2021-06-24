@@ -41,23 +41,21 @@ styleColors.forEach(color => {
 });
 
 //toggle active on label choice options
+
 var lbc = document.getElementsByClassName("label-choices-options");
-console.log(lbc);
 Array.from(lbc).forEach(div =>{
-    div.addEventListener("click", () =>{
-        if (div.classList.contains('active')){
-            div.classList.remove('active')
-        }else{
-            div.classList.add('active');
+    div.addEventListener("click", (e) =>{
+        let active = document.querySelector(".active");
+        if(active){
+            active.classList.remove('active');
         }
+        e.target.classList.add('active');
     })
 })
 
 
-
-
 //Getting user label choice
-var labelColor;
+var labelColor = null;
 
 labelContainer.addEventListener("click", (e)=>{
     if(e.target !== labelContainer){
@@ -85,22 +83,27 @@ var html;
 
 postIt.addEventListener("click", ()=>{
     let yourTitle = document.getElementById('your-title').value;
-    let yourMessage = document.getElementById('your-message').value; 
-    html = 
-        `
-        <div class="new-message">
-            <div  class="date-wrapper">
-                <div style="background-color:${labelColor}"; class="label-color"></div>
-                <div class="date">${today}</div>
+    let yourMessage = document.getElementById('your-message').value;
+    if( yourTitle.length == 0 || yourMessage.length == 0 || labelColor == null ){
+        alert("Fill out all sections.")
+        return false;
+    }else{
+        html = 
+            `
+            <div class="new-message">
+                <div  class="date-wrapper">
+                    <div style="background-color:${labelColor}"; class="label-color"></div>
+                    <div class="date">${today}</div>
+                </div>
+                <div class="message-wrapper">
+                    <h4 class="title">${yourTitle}</h4>
+                    <p class="message">${yourMessage}</p>
+                </div>
             </div>
-            <div class="message-wrapper">
-                <h4 class="title">${yourTitle}</h4>
-                <p class="message">${yourMessage}</p>
-            </div>
-        </div>
-        `;
-    
+            `;
+        
 
-    messageBoard.innerHTML+=html;
-    messageModal.style.display = `none`;
+        messageBoard.innerHTML+=html;
+        messageModal.style.display = `none`;
+    }
 });
