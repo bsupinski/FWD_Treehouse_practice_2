@@ -1,21 +1,20 @@
 const searchField = document.getElementById("search-bar");
-const filterable = document. querySelectorAll(".filter");
+const filterable = document.getElementsByClassName("new-message");
+const button = document.querySelector('.arrow');
 
 
 
 
 const handleSearch = event => {
+    const userSearch = event.target.value.toLowerCase();
     Array.from(filterable).forEach(message => {
-        const userSearch = event.target.value.toLowerCase();
-        messages = message.parentElement.parentElement;
         messageText = message.textContent.toLowerCase();
         if(messageText.includes(userSearch)) {
-            messages.style.display = "flex";
+            message.style.display = "flex";
         }else{
-            messages.style.display = "none";
+            message.style.display = "none";
         }
     });
 }
-
 
 searchField.addEventListener("keyup", handleSearch);

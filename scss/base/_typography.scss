@@ -1,3 +1,12 @@
+body{
+    font-family: $base-font;
+}
+
+header{
+    color: $color-white;
+}
+
+//Mobile Header and hamburger menu
 .overlay-menu li{
     font-size: 1.3rem;
     font-weight: 100;
@@ -5,13 +14,71 @@
     color: $color-white;
 }
 
-.fas{
+.feather-logo{
     font-size: 1.5rem;
 }
 
+//Large screen header
+.company-name-header{
+    font-size: 1.4rem;
+    font-weight: 100;
+}
 
-//create a new Note
+.company-name-header span{
+    font-weight: 900;
+}
+
+.featherpro{
+    color: lighten($color: $color-secondary, $amount: 10);
+}
+
+.wall{
+    font-size: 1.7rem;
+    font-weight: lighter;
+}
+
+//Main
+.company-name {
+    color: $color-modal-secondary;
+    font-weight: 100;
+}
+
+.company-name span{
+    font-weight: bold;
+}
+
+.search-wrapper p{
+    color: $color-modal-secondary;
+    font-size: .8rem;
+}
+
+.create-note h3{
+    font-size: 1rem;
+    color: $color-modal-main;
+}
+
+
+
+//Create a new note and new not overlay
 .post-it{
     font-size: .9rem;
-    color: white;
+    color: $color-white;
+}
+
+
+//Message post
+.new-message{
+    color: $color-modal-secondary;
+}
+
+.date{
+    font-size: .7rem;
+}
+
+.title{
+    font-size: 1rem;
+}
+
+.message{
+    font-size: .8rem;
 }

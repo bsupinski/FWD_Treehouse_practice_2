@@ -11,6 +11,13 @@ const closeButton = document.querySelector(".close")
 
 closeButton.addEventListener("click", () => {
     messageModal.style.display = `none`;
+    document.getElementById('your-title').value = "";
+    document.getElementById('your-message').value = "";
+
+    let active = document.querySelector(".active");
+    if(active){
+        active.classList.remove('active');
+    }
 })
 
 
@@ -109,5 +116,13 @@ postIt.addEventListener("click", ()=>{
             `;
         messageBoard.innerHTML+=html;
         messageModal.style.display = `none`;
+        document.getElementById('your-title').value = "";
+        document.getElementById('your-message').value = "";
+
+        let active = document.querySelector(".active");
+        if(active){
+            active.classList.remove('active');
+        }
+        
     }
 });

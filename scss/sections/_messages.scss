@@ -11,18 +11,27 @@
 .new-message{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 95%;
     margin-bottom: 20px;
+    @include media-q('small sc'){
+        width: 90%;
+        background-color: $color-text-bg;
+        padding: 10px;
+    }
+}
+.new-message{
+    padding: 10px 20px
 }
 
 .date-wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    @include media-q('small sc'){
+        margin-bottom: 25px;
+    }
 }
-
-    
 
 .label-color{
     width: 10px;
@@ -31,13 +40,23 @@
     margin-right: 10px;
 }
 
+
+
 .message-wrapper{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    width: 100%;
     background-color: $color-text-bg;
+    padding: 20px;
+    @include media-q('small sc'){
+        padding: 0;
+    }
 }
 
 .title{
     margin-bottom: 10px;
+}
+
+.message {
+    width: 100%;
 }
