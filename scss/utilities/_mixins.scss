@@ -1,0 +1,21 @@
+@mixin media-q($screen) {
+    $value: map-get($breakpoint, $screen);
+    $mobile: map-get($breakpoint, 'mobile');
+
+    @if $value == null {
+        @error '#{value}, is not a valid screen size.';
+    }
+
+    @else if $value == $mobile{
+        @media(max-width: $value){
+            @content;
+        }
+    }
+
+    @else {
+        @media(min-width: $value){
+            @content;
+        }
+    }
+
+}

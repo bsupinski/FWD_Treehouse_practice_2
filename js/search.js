@@ -1,17 +1,15 @@
 const searchField = document.getElementById("search-bar");
-const filterable = document. getElementsByClassName("filter");
-
+const filterable = document. querySelectorAll(".filter");
 
 
 
 
 const handleSearch = event => {
-    const userSearch = event.target.value.toLowerCase();
-    
     Array.from(filterable).forEach(message => {
-        messages = filterable.parentElement.parentElement;
+        const userSearch = event.target.value.toLowerCase();
+        messages = message.parentElement.parentElement;
         messageText = message.textContent.toLowerCase();
-        if( messageText.includes(userSearch)) {
+        if(messageText.includes(userSearch)) {
             messages.style.display = "flex";
         }else{
             messages.style.display = "none";

@@ -10,12 +10,29 @@ main{
     align-items: center;
     width: 90%;
     margin: auto;
-    
+    @include media-q('small sc'){
+        margin-top: 40px;
+    }
 }
 
 .company-name{
     align-self: flex-start;
     margin: 15px 0 15px 0;
+    @include media-q('small sc'){
+        display: none;
+    }
+}
+
+.functions-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include media-q('small sc'){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -26,8 +43,11 @@ main{
     // border: .5px solid $color-text-bg;
     margin-bottom: 30px;
     position: relative;
-    
+    @include media-q('small sc'){
+        width: 40%;
+    }
 }
+
 
 #search-bar{
     height: 100%;
@@ -84,6 +104,12 @@ main{
     border: 1px solid $color-text-bg;
     border-radius: 5px;
     box-shadow: 1px 4px 7px $color-text-bg;
+    @include media-q('small sc'){
+        border: 1px solid $color-main;
+        width: 40%;
+        margin-bottom: 50px;
+        box-shadow: none;
+    }
 }
 
 .create-note h3{

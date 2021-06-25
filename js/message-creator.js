@@ -107,8 +107,6 @@ postIt.addEventListener("click", ()=>{
                 </div>
             </div>
             `;
-        
-
         messageBoard.innerHTML+=html;
         messageModal.style.display = `none`;
     }
