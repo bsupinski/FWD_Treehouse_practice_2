@@ -6,6 +6,13 @@ openMenu.addEventListener("click", () =>{
     messageModal.style.display = `flex`;
 })
 
+//Close button
+const closeButton = document.querySelector(".close")
+
+closeButton.addEventListener("click", () => {
+    messageModal.style.display = `none`;
+})
+
 
 //Creating color option divs
 const labelContainer = document.querySelector('.label-choices');
@@ -80,7 +87,6 @@ const messageBoard = document.querySelector('.messages');
 const postIt = document.querySelector('.post-it');
 var html;
 
-
 postIt.addEventListener("click", ()=>{
     let yourTitle = document.getElementById('your-title').value;
     let yourMessage = document.getElementById('your-message').value;
@@ -91,13 +97,13 @@ postIt.addEventListener("click", ()=>{
         html = 
             `
             <div class="new-message">
-                <div  class="date-wrapper">
+                <div class="date-wrapper">
                     <div style="background-color:${labelColor}"; class="label-color"></div>
-                    <div class="date">${today}</div>
+                    <div class="date filter">${today}</div>
                 </div>
                 <div class="message-wrapper">
-                    <h4 class="title">${yourTitle}</h4>
-                    <p class="message">${yourMessage}</p>
+                    <h4 class="title filter">${yourTitle}</h4>
+                    <p class="message filter">${yourMessage}</p>
                 </div>
             </div>
             `;
